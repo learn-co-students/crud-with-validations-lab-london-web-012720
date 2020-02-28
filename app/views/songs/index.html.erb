@@ -1,0 +1,9 @@
+<%@songs.each do |s|%>
+<%=link_to s.title, song_path(s)%>
+<br><%=link_to "delte this song", s, method: :delete, data: {confirm: "are sure you want to delete the song>?"}%> |
+<%=link_to "edit this song", edit_song_path(s)%><br>
+
+
+<%end%>
+
+<%= link_to "new song", new_song_path%>

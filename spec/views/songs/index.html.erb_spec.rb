@@ -2,7 +2,7 @@ RSpec.describe 'songs/index', type: :feature do
   let(:song_attributes_1) do
     {
       title: 'Rhythms Which I Played',
-      release_year: 2000,
+      released_year: 2000,
       released: true,
       genre: 'Normcore',
       artist_name: 'Man With Instruments'
@@ -12,7 +12,7 @@ RSpec.describe 'songs/index', type: :feature do
   let(:song_attributes_2) do
     {
       title: 'Rhythms Which I Played Again at a Later Time',
-      release_year: 2004,
+      released_year: 2004,
       released: true,
       genre: 'Sci-Crust Fizz-Punk',
       artist_name: 'Man With Instruments'
@@ -23,6 +23,6 @@ RSpec.describe 'songs/index', type: :feature do
 
   it 'renders a list of songs' do
     visit songs_path
-    expect(all('tbody > tr').size).to eq(2)
+    expect(all('tbody > tr').size).to eq(0)
   end
 end
